@@ -1,0 +1,132 @@
+.productscreen {
+  margin: 1rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.productscreen__image {
+  margin: 1rem;
+}
+
+.productscreen__image img {
+  width: 520px;
+}
+
+.productscreen__info {
+  margin: 1rem;
+  padding-top: 2rem;
+  background-color: #fff;
+  font-size: 0.9rem;
+}
+
+.productscreen__name {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.productscreen__info > p,
+.qantity-con > p {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.productscreen__info > p:last-child,
+.qantity-con > p:last-child {
+  border: none;
+}
+
+.qantity-con {
+  width: 300px;
+  margin: 1rem;
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  height: fit-content;
+}
+
+.qantity-con p {
+  padding: 1rem;
+  font-size: 0.8rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.qantity-con p > button {
+  grid-column: 1/-1;
+  padding: 10px 16px;
+  background-color: #171717;
+  border: 1px solid #171717;
+  color: #fff;
+  cursor: pointer;
+}
+
+.qantity-con select {
+  padding: 10px 16px;
+}
+
+@media (max-width: 1220px) {
+  .productscreen {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "image qty"
+      "desc desc ";
+  }
+  .productscreen__image {
+    grid-area: image;
+  }
+
+  .productscreen__info {
+    grid-area: desc;
+    height: fit-content;
+  }
+
+  .qantity-con {
+    width: 100%;
+    margin-top: 3rem;
+    grid-area: qty;
+  }
+}@media (max-width: 970px) {
+  .productscreen {
+      grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "image "
+      "desc"
+      "qty";
+  }
+  .productscreen__image {
+    grid-area: image;
+  }
+
+  .productscreen__info {
+    grid-area: desc;
+  }
+
+  .qantity-con {
+    width: 90%;
+    margin-left: 20px;
+    grid-area: qty;
+  }
+}
+
+@media (max-width:600px){
+    .productscreen__image img{
+        width: 450px;
+    }
+}
+@media (max-width:530px){
+    .productscreen__image img{
+        width: 400px;
+    }
+}
+
+@media (max-width:450px){
+    .productscreen__image img{
+        width: 350px;
+    }
+}
+
+@media (max-width:400px){
+    .productscreen__image img{
+        width: 300px;
+    }
+}
